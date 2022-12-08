@@ -13,6 +13,8 @@ app.use(express.urlencoded());
 
 // Static Files
 app.use('/css', express.static(__dirname + '/css'))
+app.use('/js', express.static(__dirname + '/js'))
+
 
 
 // Set Views
@@ -25,6 +27,7 @@ app.get('/', function(req, res){
 app.get('/index', function(req, res){
     res.render('index')
 })
+
 
 app.post('/', function(req, res) {// Trae los datos de la pagina web
     if(boletas>=1){ //total de voletas
